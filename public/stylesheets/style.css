@@ -26,11 +26,21 @@ nav ul {
 
 nav ul li {
   background-color: red;
-  margin-top: 20vh;
-  margin-bottom: 20vh; }
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  font-size: 5vmin;
+  padding: 1%; }
   nav ul li#first {
     margin-top: 0; }
   nav ul li#last {
     margin-bottom: 0; }
+
+#cont {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(63, 191, 127, 0.5); }
 
 /*# sourceMappingURL=style.css.map */
