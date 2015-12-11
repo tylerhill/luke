@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1; }
+
+body {
+  margin: 0;
+  height: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+nav {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); }
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+nav ul li {
+  background-color: red;
+  margin-top: 20vh;
+  margin-bottom: 20vh; }
+  nav ul li#first {
+    margin-top: 0; }
+  nav ul li#last {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */
