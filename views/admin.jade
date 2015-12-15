@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title post it
+    script(src='/jquery.js')
+    script(src='/javascripts/blog.js')
+  body
+    form(id='blog' method='post' action='/blog/admin')
+      input(id='pBody' name='pBody' type='text')
+      input(id='bSend' type='submit')

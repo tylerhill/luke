@@ -11,6 +11,11 @@ var blog = require('./routes/blog');
 
 var app = express();
 
+// database
+var sqlite3 = require('sqlite3').verbose();
+var dbinit = new sqlite3.Database('posts.db');
+app.set('db',dbinit);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -27,7 +32,11 @@ app.use(require('node-sass-middleware')({
   indentedSyntax: true,
   sourceMap: true
 }));
+
+
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('node_modules/jquery/dist'));
 
 app.use('/', routes);
 app.use('/users', users);
@@ -64,6 +73,9 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+
+
 
 
 module.exports = app;
