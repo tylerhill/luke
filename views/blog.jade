@@ -1,13 +1,14 @@
 extends layout
 
 block content
-   each post in posts
-      p #{post.title}
-   if current
-     h1= posts[current].title
-     p= posts[current].pBody
-   else 
-     h1= posts[0].title
-     p= posts[0].pBody
-    
+  each post in posts
+     p #{post.title}
+  if current
+    h1= posts[current].title
+    p= posts[current].pBody
+  else 
+    h1= posts[0].title
+    p= posts[0].pBody
+  a(href=next) next
+  a(href=prev) prev
 

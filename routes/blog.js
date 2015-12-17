@@ -5,22 +5,34 @@ router.get('/', function (req, res, next) {
   var dbinst = req.app.get('db');
   console.log(dbinst);
   var posts = [];
-  dbinst.each('SELECT rowid, * FROM blog ORDER BY rowid DESC LIMIT 5', function(err,row) {
+  dbinst.each('SELECT rowid, * FROM blog ORDER BY rowid DESC', function(err,row) {
     posts.push({id: row.rowid, title: row.title, pBody: row.pBody});
   },function() {
-    res.render('blog', {posts: posts});
+    var pLength = posts.length;
+      nextP = 1;
+      prevP = pLength - 1;
+    res.render('blog', {posts: posts, next: nextP, prev: prevP, length: pLength});
   });
 });
 
 router.get('/:id', function(req,res,next) {
   var current = req.params.id;
+  current = parseInt(current,10);
+  var nextP = current + 1;
+  var prevP = current - 1;
   var dbinst = req.app.get('db');
   console.log(dbinst);
   var posts = [];
-  dbinst.each('SELECT rowid, * FROM blog ORDER BY rowid DESC LIMIT 5', function(err,row) {
+  dbinst.each('SELECT rowid, * FROM blog ORDER BY rowid DESC', function(err,row) {
     posts.push({id: row.rowid, title: row.title, pBody: row.pBody});
   },function() {
-    res.render('blog', {posts: posts, current: current});
+    var pLength = posts.length;
+    if(current == pLength - 1) {
+      nextP = 0;
+    } else if(current == 0) {
+      prevP = pLength - 1;
+    }
+    res.render('blog', {posts: posts, current: current, next: nextP, prev: prevP, length: pLength});
   });
 
 });
