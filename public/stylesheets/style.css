@@ -5,12 +5,15 @@ html {
   line-height: 1; }
 
 body {
+  background-color: #dee1e3;
   margin: 0;
   height: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; }
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 0px 2px black; }
 
 nav {
   position: relative;
@@ -25,14 +28,20 @@ nav ul {
   margin: 0; }
 
 nav ul li {
-  background-color: red;
   margin-top: 10vh;
   margin-bottom: 10vh;
   font-size: 5vmin;
-  padding: 1%; }
+  padding: 1%;
+  padding-left: 10%; }
   nav ul li#first {
+    background-color: #eb1c23;
     margin-top: 0; }
+  nav ul li#second {
+    background-color: #ffe600; }
+  nav ul li#third {
+    background-color: #00aeed; }
   nav ul li#last {
+    background-color: #4fb849;
     margin-bottom: 0; }
 
 #cont {
@@ -41,6 +50,20 @@ nav ul li {
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: rgba(63, 191, 127, 0.5); }
+  background-color: rgba(184, 218, 242, 0.9);
+  text-align: center;
+  box-shadow: 0px 0 5px;
+  overflow-y: scroll; }
+
+#bio {
+  padding: 5%; }
+
+#bio p {
+  margin: 0; }
+
+#bio img {
+  width: 30%;
+  margin: 1%;
+  float: right; }
 
 /*# sourceMappingURL=style.css.map */
