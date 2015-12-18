@@ -1,4 +1,7 @@
 $height: 100vh
+@font-face 
+  font-family: 'univers'
+  src:url(univers.otf)
 
 html
   height: 100%
@@ -11,6 +14,9 @@ body
   margin: 0
   height: 100%
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+
+h1, h2, a
+  font-family: 'univers', sans-serif
 
 a
   color: white;
@@ -89,6 +95,24 @@ iframe
   width: 90%
   height: 250px
   margin: 5%
+
+#curPost
+  color: white
+  display: inline-block
+  width: 90%
+  border-radius: 10px
+  background-color: rgba(100,100,100,0.9)
+  #prev
+    float: left
+    margin: 2%
+    text-shadow: none
+  #next
+    float: right
+    margin: 2%
+    text-shadow: none
+
+  
+
 #goals 
   display: inline-block
   li
