@@ -15,6 +15,16 @@ a {
   text-decoration: none;
   text-shadow: 2px 0px 2px black; }
 
+#mast {
+  position: absolute;
+  width: 50%;
+  text-align: center; }
+  #mast a {
+    display: inline-block; }
+  #mast h1 {
+    color: black;
+    text-shadow: none; }
+
 nav {
   position: relative;
   display: inline-block;
@@ -55,15 +65,35 @@ nav ul li {
   box-shadow: 0px 0 5px;
   overflow-y: scroll; }
 
-#bio {
-  padding: 5%; }
-
 #bio p {
-  margin: 0; }
+  margin: 5%; }
 
 #bio img {
   width: 30%;
-  margin: 1%;
+  margin: 5%;
+  margin-top: 0;
   float: right; }
+
+#preview {
+  color: white;
+  display: inline-block;
+  width: 90%;
+  border-radius: 10px;
+  background-color: rgba(100, 100, 100, 0.9); }
+  #preview h1, #preview p {
+    text-shadow: none;
+    margin: 2%; }
+
+iframe {
+  display: inline-block;
+  width: 90%;
+  height: 250px;
+  margin: 5%; }
+
+#goals {
+  display: inline-block; }
+  #goals li {
+    font-size: 1.5em;
+    text-align: left; }
 
 /*# sourceMappingURL=style.css.map */

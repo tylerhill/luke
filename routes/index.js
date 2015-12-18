@@ -13,4 +13,8 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/goals', function(req,res,next) {
+  res.render('goals');
+});
+
 module.exports = router;
