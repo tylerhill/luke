@@ -17,4 +17,9 @@ router.get('/goals', function(req,res,next) {
   res.render('goals');
 });
 
+
+router.get('/dist', function(req,res,next) {
+  res.render('dist');
+});
+
 module.exports = router;

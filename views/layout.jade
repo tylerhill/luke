@@ -3,6 +3,9 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/jquery.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7zBxIBoJq6xOCvkiSFuPOTYtv4wU8YJ4&")
+    script(src='/javascripts/map.js')
   body
     #mast
       a(href='/') 
@@ -14,7 +17,7 @@ html
         li#second 
           a(href='/goals/') Goals
         li#third 
-          a(href='/bart/') BART District 9
+          a(href='/dist/') BART District 9
         li#last 
           a(href='/donate/') Donate
     #cont
